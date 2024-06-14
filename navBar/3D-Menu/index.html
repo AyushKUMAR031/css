@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap Icon-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css"/>
+    <title>3D-Menu-Bar</title>
+  </head>
+  <body>
+    <nav class="button-container">
+      <ul>
+        <li class="active"><a href="#" class="active-text"><i class="bi bi-house-fill"  aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="bi bi-globe-americas" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="bi bi-rocket-takeoff-fill" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="bi bi-person-circle" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+    <div class="created">
+      <p>Created By</p>
+      <a href="https://github.com/AyushKUMAR031">Code Ayush</a>
+    </div>
+  </body>
+
+  <script>
+      const list = document.querySelectorAll("li");
+      list.forEach((item) => {
+        item.addEventListener('click', function() {
+          list.forEach((li) => {
+            li.classList.remove("active");
+            li.querySelector("a").classList.remove("active-text");
+          });
+          this.classList.add("active");
+          this.querySelector("a").classList.add("active-text");
+        });
+      });
+  </script>
+</html>

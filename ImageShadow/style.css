@@ -1,0 +1,42 @@
+body {
+    background-color: #2E2E2E;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+}
+
+.image-box-shadow {
+    padding: 10px;
+    box-shadow: 12px 8px 20px rgb(214, 41, 10);
+}
+
+.image-drop-shadow {
+    padding: 10px;
+    filter: drop-shadow(12px 8px 10px rgb(218, 3, 3));
+}
+
+img {
+    max-width: 170px;
+    display: block;
+}
+
+span {
+    background:linear-gradient(to right, rgb(37, 1, 1), rgb(124, 62, 62));
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: fixed;
+    right: 5px;
+    top:40%;
+    width: 25%;
+    font-size: 1.5rem;
+
+}

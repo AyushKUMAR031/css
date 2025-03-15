@@ -1,4 +1,4 @@
-import styles from "./PhotoCard.module.css";
+import styles from "./photoCard.module.css";
 
 const PhotoCard = () => {
     const images = [

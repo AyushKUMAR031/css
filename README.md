@@ -1,3 +1,3 @@
 **Advance CSS**
 
-- This is my practise repo for upgrading my CSS concept.
+- This is my practise repo for enhancing my CSS concept.

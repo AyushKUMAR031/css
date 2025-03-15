@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import styles from "./GridGallery.module.css";
 
+import ellie from "../../assets/ellie.jpg";
+import button from "../../assets/button.png";
+import image3 from "../../assets/image3.jpg";
+import cursor from "../../assets/Cursor.png";
+import web from "../../assets/web.png";
+
 export default function GridGallery(){
     return (
         <>  
@@ -9,7 +15,7 @@ export default function GridGallery(){
 
             <div className={styles.gridGalleryCardContainer}>
                     <div className={styles.gridGalleryCard}>
-                        <img src="./src/assets/ellie.jpg" alt="placeholder" />
+                        <img src={ellie} alt="placeholder" />
                         <div className={styles.gridGalleryCardContent}>
                             <h3 className={styles.gridGalleryCardContentH3}>3D Hover</h3>
                             <p className={styles.gridGalleryCardContentP}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -21,7 +27,7 @@ export default function GridGallery(){
                         </div>
                     </div>
                     <div className={styles.gridGalleryCard}>
-                        <img src="./src/assets/button.png" alt="placeholder" />
+                        <img src={button} alt="placeholder" />
                         <div className={styles.gridGalleryCardContent}>
                             <h3 className={styles.gridGalleryCardContentH3}>3D NavBar</h3>
                             <p className={styles.gridGalleryCardContentP}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -33,7 +39,7 @@ export default function GridGallery(){
                         </div>
                     </div>
                     <div className={styles.gridGalleryCard}>
-                        <img src="./src/assets/image3.jpg" alt="placeholder" />
+                        <img src={image3} alt="placeholder" />
                         <div className={styles.gridGalleryCardContent}>
                             <h3 className={styles.gridGalleryCardContentH3}>PhotoCard</h3>
                             <p className={styles.gridGalleryCardContentP}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -45,7 +51,7 @@ export default function GridGallery(){
                         </div>
                     </div>
                     <div className={styles.gridGalleryCard}>
-                        <img src="./src/assets/Cursor.png" alt="placeholder" />
+                        <img src={cursor} alt="placeholder" />
                         <div className={styles.gridGalleryCardContent}>
                             <h3 className={styles.gridGalleryCardContentH3}>Mouse Effect</h3>
                             <p className={styles.gridGalleryCardContentP}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -57,7 +63,7 @@ export default function GridGallery(){
                         </div>
                     </div>
                     <div className={styles.gridGalleryCard}>
-                        <img src="/src/assets/web.png" alt="placeholder" />
+                        <img src={web} alt="placeholder" />
                         <div className={styles.gridGalleryCardContent}>
                             <h3 className={styles.gridGalleryCardContentH3}>Static Page</h3>
                             <p className={styles.gridGalleryCardContentP}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 

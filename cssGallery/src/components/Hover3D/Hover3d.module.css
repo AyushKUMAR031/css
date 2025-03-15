@@ -1,0 +1,117 @@
+.maindiv {
+  background-color: rgb(18, 18, 18);
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+
+.contentContainer {
+  display: grid;
+  gap: 20px; 
+  text-align: center;
+}
+
+h1 {
+  background-color: rgb(18, 18, 18);
+  color: yellowgreen;
+  padding: 0;
+  margin: 0;
+  font-size: 2.5rem; /* Increased for better visibility */
+}
+
+.article {
+  width: 60vw;  /* Larger base size for better scaling */
+  max-width: 800px; /* Increased limit for large screens */
+  position: relative;
+  transition: all 0.3s ease;
+  perspective: 1000px;
+}
+
+.article img:first-child {
+  width: 100%;
+  box-shadow: 0px 20px 35px -3px rgba(10, 49, 205, 0.5);
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.article img:last-child {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.article:hover img:first-child {
+  transform: perspective(250px) rotateX(30deg) translateY(-10%) scale(0.95);
+  opacity: 0.3;
+}
+
+.article:hover img:last-child {
+  transform: translateY(0);
+  opacity: 1;
+  padding: 10px;
+  filter: drop-shadow(4px 3px 4px rgb(49, 11, 138));
+  scale: 1.1;  /* Reduced scale to prevent overflow */
+}
+
+.create {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.create p {
+  color: whitesmoke;
+}
+
+.create a {
+  color: rgb(159, 32, 197);
+  text-shadow: 0 0 15px rgba(192, 10, 220, 0.5);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.create a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 568px) {
+  .maindiv {
+      padding: 10px;
+  }
+
+  .content-container {
+      gap: 15px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .article {
+      width: 85vw;  /* Larger default size for smaller screens */
+      max-width: 350px; /* Ensures it doesn't grow too large */
+  }
+
+  .article:hover img:last-child {
+      scale: 1;  /* Prevent oversizing in smaller screens */
+  }
+
+  .create {
+      font-size: 10px;
+  }
+}

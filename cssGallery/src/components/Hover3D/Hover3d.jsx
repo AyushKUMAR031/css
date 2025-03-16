@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './Hover3d.module.css';
 
+import Ellie from '@/assets/Ellie.jpg';  // Correct way to import
+import EllieCutout from '@/assets/Ellie_cutout.png'; // Correct way to import
+
 export default function Hover3d() {
     return (
         <div className={styles.maindiv}>
@@ -8,8 +11,8 @@ export default function Hover3d() {
             <div className={styles.contentContainer}> {/* New container for structured layout */}
 
                 <article className={styles.article}>
-                    <img src="./src/assets/Ellie.jpg" alt="Ellie" />
-                    <img src="./src/assets/Ellie_cutout.png" alt="Ellie Cutout" />
+                    <img src={Ellie} alt="Ellie" />
+                    <img src={EllieCutout} alt="Ellie Cutout" />
                 </article>
 
             </div>

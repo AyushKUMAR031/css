@@ -1,12 +1,19 @@
 import styles from "./photoCard.module.css";
 
+// Import images for Vite compatibility
+import Image1 from "@/assets/image1.png";
+import Image2 from "@/assets/image2.jpg";
+import Image3 from "@/assets/image3.jpg";
+import Image4 from "@/assets/image4.avif";
+import Image5 from "@/assets/image5.webp";
+
 const PhotoCard = () => {
     const images = [
-        { src: "../src/assets/image1.png", alt: "photo1" },
-        { src: "../src/assets/image2.jpg", alt: "photo2" },
-        { src: "../src/assets/image3.jpg", alt: "photo3" },
-        { src: "../src/assets/image4.avif", alt: "photo4" },
-        { src: "../src/assets/image5.webp", alt: "photo5" }
+        { src: Image1, alt: "photo1" },
+        { src: Image2, alt: "photo2" },
+        { src: Image3, alt: "photo3" },
+        { src: Image4, alt: "photo4" },
+        { src: Image5, alt: "photo5" }
     ];
 
     return (

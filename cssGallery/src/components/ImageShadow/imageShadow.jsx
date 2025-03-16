@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './imageShadow.module.css';
 
+// Import images for Vite compatibility
+import Kakashi from '@/assets/kakashi.jpg';
+import Kakashi2 from '@/assets/kakashi2.png';
+
 const ImageShadow = () => {
   return (
     <div className={styles.shadow}>
@@ -10,7 +14,7 @@ const ImageShadow = () => {
       <div className={styles.container}>
         <div className={styles.imageBoxShadow}>
           <img 
-            src="/src/assets/kakashi.jpg" 
+            src={Kakashi} 
             alt="Image with Box Shadow" 
             className={styles.images} 
           />
@@ -19,7 +23,7 @@ const ImageShadow = () => {
 
         <div className={styles.imageDropShadow}>
           <img 
-            src="/src/assets/kakashi.jpg" 
+            src={Kakashi} 
             alt="Image with Drop Shadow" 
             className={styles.images} 
           />
@@ -31,7 +35,7 @@ const ImageShadow = () => {
       <div className={styles.container}>
         <div className={styles.imageBoxShadow}>
           <img 
-            src="/src/assets/kakashi2.png" 
+            src={Kakashi2} 
             alt="Image with Box Shadow without Bg" 
             className={styles.images} 
           />
@@ -40,7 +44,7 @@ const ImageShadow = () => {
 
         <div className={styles.imageDropShadow}>
           <img 
-            src="/src/assets/kakashi2.png" 
+            src={Kakashi2} 
             alt="Image with Drop Shadow without Bg" 
             className={styles.images} 
           />

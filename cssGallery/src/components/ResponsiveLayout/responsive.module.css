@@ -1,0 +1,107 @@
+.label {
+    min-height: 100vh; /* to make the view exactly 1 screen size , and min-height so that it can grow if more content is added */
+    display: grid;
+    grid-template-columns: 300px 1fr; /* providing 2 cols for 1 fraction so that they can resize as per screen */
+    grid-template-rows: auto 1fr auto; 
+    grid-template-areas: /* this is the part to simplify which part/section will go where */
+    "navbar navbar"
+    "sidebar main"
+    "sidebar footer";
+
+    color: aqua;
+}
+
+.nav {
+    grid-area: navbar;
+    position: sticky; /* this will make the navbar sticky to the top of the screen */
+    top: 0; /* it provides the sticking point to nav */
+    background-color: rgb(64, 74, 167);
+    color: rgb(226, 221, 221);
+    padding: 1em;
+
+    display: grid;
+    grid-template-columns: auto 1fr; /* button and title side by side */
+    align-items: center; /* vertically center both */
+    column-gap: 1em; /* optional spacing between button and title */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(22, 122, 143);
+    position: sticky;
+    top: 50.9px; /* here we place the height of nav for sticking point */
+    align-self: start; /* to add extra info position and view then we will add height */
+    height: calc(100vh - 50.9px); /* this will make the sidebar to be 100% of the screen height minus the height of the navbar */
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    display: none;
+    padding: 0.2em 1.1em;
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* gradient vibes */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+    grid-area: main;
+    background-color: rgb(221, 222, 203);
+    color: black
+}
+
+.main h2 {
+    background-color: rgb(221, 222, 203);
+    color: black;
+}
+
+.main p {
+    background-color: rgb(221, 222, 203);
+    color: black;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(8, 107, 39);
+    color: white;
+    padding: 2em;
+}
+
+/* responsive code */
+@media (max-width: 800px) {
+    .label {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 300px;
+        display: none; /* Sidebar hidden by default on small screens */
+    }
+
+    .show {
+        display: block;
+    }
+
+    .btn {
+        display: block;
+    }
+}

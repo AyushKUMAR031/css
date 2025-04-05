@@ -9,6 +9,7 @@ import MouseFlowEffect from './components/ColorfullPointer/MouseFlowEffect';
 import StaticPage from './components/WebPage/staticPage';
 import ImageShadow from './components/ImageShadow/imageShadow';
 import Responsive from './components/ResponsiveLayout/responsive';
+import Face from './components/Face/face';
 
 export default function App(){
   return (
@@ -23,6 +24,7 @@ export default function App(){
           <Route path="/card5" element={<StaticPage />} />
           <Route path="/card6" element={<ImageShadow />} />
           <Route path="/card7" element={<Responsive/>} />
+          <Route path="/card8" element={<Face/>} />
         </Routes>
       </Router>
     </>

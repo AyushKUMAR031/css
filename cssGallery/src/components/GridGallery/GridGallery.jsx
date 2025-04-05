@@ -8,6 +8,7 @@ import Cursor from '@/assets/Cursor.png';
 import WebImg from '@/assets/web.png';
 import BoxShadow from '@/assets/boxShadow.png';
 import Image7 from '@/assets/image7.png';
+import Image8 from '@/assets/Image8.png';
 
 
 export default function GridGallery(){
@@ -87,6 +88,16 @@ export default function GridGallery(){
                                 A projection of basic responsive layout with minimalistic CSS (grid and grid-template).
                             </p>
                             <Link to="/card7" className={styles.gridGalleryCardContentLink}>Card Seven</Link>
+                        </div>
+                    </div>
+                    <div className={styles.gridGalleryCard}>
+                        <img src={Image8} alt="placeholder" />
+                        <div className={styles.gridGalleryCardContent}>
+                            <h3 className={styles.gridGalleryCardContentH3}>Moving Face</h3>
+                            <p className={styles.gridGalleryCardContentP}>
+                                A CSS animation, where a face changes expression on mouse movement.
+                            </p>
+                            <Link to="/card8" className={styles.gridGalleryCardContentLink}>Card Eight</Link>
                         </div>
                     </div>
             </div>

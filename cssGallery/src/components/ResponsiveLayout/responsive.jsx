@@ -8,7 +8,7 @@ export default function Responsive() {
     };
 
     return (
-        <label className={styles.label}>
+        <div className={styles.label}>
             <nav className={styles.nav}>
                 <button onClick={toggleSidebar} className={styles.btn}>Open</button>
                 navbar
@@ -27,6 +27,6 @@ export default function Responsive() {
                 </p>
             </main>
             <footer className={styles.footer}>footer</footer>
-        </label>
+        </div>
     );
 }
